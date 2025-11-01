@@ -1,20 +1,22 @@
-# Usa a imagem Node 22
-FROM node:22
+# Usando Node oficial (versão LTS)
+FROM node:20
 
-# Define o diretório de trabalho
+# Diretório de trabalho dentro do container
 WORKDIR /app
 
-# Copia os arquivos necessários
+# Copia apenas package.json e package-lock.json para otimizar cache
 COPY package*.json ./
 
-# Instala dependências (substitui o npm ci)
-RUN npm install --legacy-peer-deps
+# Limpa cache do npm, atualiza npm e instala dependências
+RUN npm cache clean --force \
+    && npm install -g npm@11.6.2 \
+    && npm install --legacy-peer-deps
 
 # Copia o restante do projeto
 COPY . .
 
-# Expõe a porta
+# Expõe a porta que a aplicação vai usar (se necessário)
 EXPOSE 3000
 
-# Comando de inicialização
-CMD ["npm", "start"]
+# Comando padrão para rodar a aplicação
+CMD ["node", "index.js"]
