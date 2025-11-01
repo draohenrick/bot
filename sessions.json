@@ -1,0 +1,84 @@
+[
+  [
+    "553188427858@c.us",
+    {
+      "saudado": true,
+      "mode": "menu_principal",
+      "protocol": null,
+      "serviceKey": null,
+      "awaitingTipo": null,
+      "data": {},
+      "etapa": 0
+    }
+  ],
+  [
+    "553188470935@c.us",
+    {
+      "saudado": true,
+      "mode": "menu_principal",
+      "protocol": null,
+      "serviceKey": null,
+      "awaitingTipo": null,
+      "data": {},
+      "etapa": 0,
+      "files": [
+        "D:\\1 ARQUIVOS DRAO\\BOTS\\whatsbot_Radiola\\uploads\\1759505667565_553188470935.ogg"
+      ],
+      "aiHistory": [],
+      "lastUpdate": 1759505667295,
+      "followUpSent": false
+    }
+  ],
+  [
+    "551130147644@c.us",
+    {
+      "saudado": true,
+      "mode": "awaiting_survey_consent",
+      "protocol": null,
+      "serviceKey": null,
+      "awaitingTipo": null,
+      "data": {},
+      "etapa": 0
+    }
+  ],
+  [
+    "553195568049@c.us",
+    {
+      "saudado": false,
+      "mode": null,
+      "protocol": null,
+      "serviceKey": null,
+      "awaitingTipo": null,
+      "data": {},
+      "etapa": 0,
+      "files": [],
+      "aiHistory": [],
+      "lastUpdate": 1759511980561,
+      "followUpSent": false
+    }
+  ],
+  [
+    "557788449681@c.us",
+    {
+      "saudado": false,
+      "mode": null,
+      "protocol": null,
+      "serviceKey": null,
+      "awaitingTipo": null,
+      "data": {},
+      "etapa": 0
+    }
+  ],
+  [
+    "5511963489822@c.us",
+    {
+      "saudado": true,
+      "mode": "awaiting_survey_consent",
+      "protocol": null,
+      "serviceKey": null,
+      "awaitingTipo": null,
+      "data": {},
+      "etapa": 0
+    }
+  ]
+]

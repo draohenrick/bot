@@ -1,0 +1,73 @@
+{
+  "1": {
+    "label": "Produção de eventos",
+    "keywords": ["produção", "eventos"],
+    "type": "briefing",
+    "briefing": [
+      { "key": "Tipo de Evento", "q": "Qual é o tipo de evento que deseja realizar? (Ex: Shows, Feiras, Exposição, Rodeios, Outros)" },
+      { "key": "publico_alvo", "q": "Qual o público-alvo principal?" },
+      { "key": "orcamento_estimado", "q": "Você tem uma estimativa de orçamento para investir neste evento?" }
+    ]
+  },
+  "2": {
+    "label": "Aluguel de Iluminação e estruturas",
+    "keywords": ["som", "luz", "palco", "painel", "iluminação", "estrutura"],
+    "type": "briefing",
+    "briefing": [
+      { "key": "Qual o tipo de estrutura procura", "q": "Palco, Som, Iluminação, Painel, Boate, Outros?" },
+      { "key": "Qual o publico estimado", "q": "Qual o público esperado em seu evento?" },
+      { "key": "Qual o período de locação", "q": "Qual o período do evento, duração e época?" }
+    ]
+  },
+  "3": {
+    "label": "Agenciamento Artístico",
+    "keywords": ["artista", "agenda", "agenciamento"],
+    "type": "briefing",
+    "briefing": [
+      { "key": "Qual o objetivo do agenciamento", "q": "Alavancar carreira, distribuição digital, vendas de show, outros?" },
+      { "key": "Qual o estilo ou segmento do artista", "q": "Cantor, músico, humorista, outros?" },
+      { "key": "Quais as principais redes do artista", "q": "Nos informe o @ ou link das redes sociais (Instagram, Facebook, YouTube, etc.)" }
+    ]
+  },
+  "4": {
+    "label": "Vendas de Show",
+    "keywords": ["vendas", "show"],
+    "type": "action",
+    "action": "transferToHuman"
+  },
+  "5": {
+    "label": "Vendas e aluguel de painel de led",
+    "keywords": ["painel", "led"],
+    "type": "briefing",
+    "briefing": [
+      { "key": "Qual a metragem você deseja?", "q": "Qual é o tamanho total do painel em metro quadrado?" },
+      { "key": "Qual a configuração deseja?", "q": "Painel indoor, outdoor, publicitário?" },
+      { "key": "Deseja comprar ou alugar?", "q": "Deseja adquirir o seu painel ou usar um de nossos planos de aluguel?" }
+    ]
+  },
+  "6": {
+    "label": "Cast para TV e outras mídias",
+    "keywords": ["cast", "tv", "radio", "midia"],
+    "type": "briefing",
+    "briefing": [
+        { "key": "objetivo_midia", "q": "Qual seu principal objetivo com a divulgação na mídia? (Ex: Lançar uma música, divulgar um evento, fortalecer a marca)" },
+        { "key": "material_disponivel", "q": "Você já possui material de divulgação pronto (release, fotos, vídeos)?" }
+    ]
+  },
+  "7": {
+    "label": "Agendar um Atendimento",
+    "keywords": ["agendar", "reunião", "agendamento"],
+    "type": "briefing",
+    "briefing": [
+      { "key": "datahora", "q": "📅 Para quando você gostaria de agendar? (ex: 01/10/2025 15:30):" },
+      { "key": "objetivo_reuniao", "q": "📝 Qual o principal assunto/objetivo da reunião?" },
+      { "key": "contato", "q": "📞 Qual o melhor contato (telefone ou e-mail) para confirmarmos?" }
+    ]
+  },
+  "8": {
+    "label": "Falar com um Atendente",
+    "type": "action",
+    "action": "transferToHuman",
+    "keywords": ["atendente", "humano", "falar", "ajuda"]
+  }
+}

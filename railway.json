@@ -1,0 +1,16 @@
+{
+"build": {
+"builder": "NIXPACKS"
+},
+"deploy": {
+"startCommand": "npm start",
+"restartPolicyType": "ON_FAILURE"
+},
+"project": "bot-radiola",
+"plugins": [],
+"env": {
+"PORT": "3000",
+"ATENDENTE": "5531994698112",
+"STATUS": "5531993590995"
+}
+}
