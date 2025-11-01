@@ -5,7 +5,7 @@ builder = "NIXPACKS"
 nixPkgs = ["nodejs", "npm"]
 
 [phases.install]
-cmd = "npm install"
+cmd = "npm install --legacy-peer-deps"
 
 [start]
 cmd = "npm start"
