@@ -1,21 +1,21 @@
-# Escolhe a imagem oficial do Node.js
+# Escolhe a imagem oficial do Node
 FROM node:20-alpine
 
 # Define o diretório de trabalho
 WORKDIR /app
 
-# Copia apenas os arquivos de dependências primeiro
-COPY package.json package-lock.json ./
+# Copia package.json e package-lock.json
+COPY package*.json ./
 
-# Atualiza o npm e instala dependências de produção
+# Atualiza npm e instala dependências de produção
 RUN npm install -g npm@11 \
-    && npm ci --omit=dev --legacy-peer-deps
+    && npm install --omit=dev --legacy-peer-deps
 
-# Copia todo o código da aplicação
+# Copia o restante do projeto
 COPY . .
 
-# Expõe a porta da aplicação (ajuste se necessário)
+# Expõe a porta que sua app vai rodar
 EXPOSE 3000
 
-# Comando para iniciar a aplicação
+# Comando para rodar a aplicação
 CMD ["node", "index.js"]
