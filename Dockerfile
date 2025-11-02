@@ -1,22 +1,21 @@
-# Dockerfile para WhatsApp Bot no Railway
+# Usando Node.js LTS
+FROM node:20-alpine
 
-FROM node:20
-
-# Diretório de trabalho
+# Diretório de trabalho dentro do container
 WORKDIR /app
 
-# Copia arquivos de package
+# Copia apenas os arquivos de dependências primeiro (melhora cache)
 COPY package*.json ./
 
-# Limpa cache e instala dependências de produção
+# Limpa cache, instala dependências de produção e ignora devDependencies
 RUN npm cache clean --force \
     && npm install --omit=dev --legacy-peer-deps
 
-# Copia todo o código da aplicação
+# Copia todo o restante do código da aplicação
 COPY . .
 
-# Expõe a porta (caso use API ou webhook)
+# Expõe a porta que o app vai rodar (ajuste se necessário)
 EXPOSE 3000
 
-# Comando para rodar a aplicação
+# Comando para rodar sua aplicação
 CMD ["node", "index.js"]
