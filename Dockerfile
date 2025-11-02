@@ -2,18 +2,16 @@ FROM node:20-alpine
 
 WORKDIR /app
 
-# Copia package.json e package-lock.json
 COPY package*.json ./
 
-# Remove node_modules e limpa cache do npm antes de instalar
-RUN rm -rf node_modules \
-    && npm cache clean --force \
+# Instala dependências sem cache e tenta várias vezes
+RUN npm config set fetch-retry-mintimeout 20000 \
+    && npm config set fetch-retry-maxtimeout 120000 \
+    && npm config set fetch-retries 5 \
     && npm install -g npm@11.6.2 \
-    && npm install --legacy-peer-deps
+    && npm install --legacy-peer-deps --no-cache
 
-# Copia o restante do projeto
 COPY . .
 
 EXPOSE 3000
-
 CMD ["npm", "start"]
