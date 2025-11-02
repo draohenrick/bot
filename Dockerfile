@@ -1,21 +1,21 @@
-# Usando Node.js LTS
+# Escolhe a imagem oficial do Node.js
 FROM node:20-alpine
 
-# Diretório de trabalho dentro do container
+# Define o diretório de trabalho
 WORKDIR /app
 
-# Copia apenas os arquivos de dependências primeiro (melhora cache)
-COPY package*.json ./
+# Copia apenas os arquivos de dependências primeiro
+COPY package.json package-lock.json ./
 
-# Limpa cache, instala dependências de produção e ignora devDependencies
-RUN npm cache clean --force \
-    && npm install --omit=dev --legacy-peer-deps
+# Atualiza o npm e instala dependências de produção
+RUN npm install -g npm@11 \
+    && npm ci --omit=dev --legacy-peer-deps
 
-# Copia todo o restante do código da aplicação
+# Copia todo o código da aplicação
 COPY . .
 
-# Expõe a porta que o app vai rodar (ajuste se necessário)
+# Expõe a porta da aplicação (ajuste se necessário)
 EXPOSE 3000
 
-# Comando para rodar sua aplicação
+# Comando para iniciar a aplicação
 CMD ["node", "index.js"]
