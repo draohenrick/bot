@@ -1,8 +1,5 @@
-# ===========================
-# Dockerfile para WhatsApp Bot
-# ===========================
+# Dockerfile para WhatsApp Bot no Railway
 
-# Use Node.js 20
 FROM node:20
 
 # Diretório de trabalho
@@ -18,11 +15,8 @@ RUN npm cache clean --force \
 # Copia todo o código da aplicação
 COPY . .
 
-# Expõe a porta que seu bot usa (ex: para API ou webhook)
+# Expõe a porta (caso use API ou webhook)
 EXPOSE 3000
-
-# Persistir dados da sessão do WhatsApp
-VOLUME ["/app/session"]
 
 # Comando para rodar a aplicação
 CMD ["node", "index.js"]
